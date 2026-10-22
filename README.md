@@ -31,4 +31,4 @@ javavisual-tp03-[NIM]/
 
 - **Nama Lengkap:** [Nazwa Haqqi Nasution]
 - **NIM:** [253303621233]
-- **Link Google Docs Bagian D:https://1drv.ms/w/c/4c356e610a8583e8/IQAcDgvfKxUSRZ38z01dYsNrAVDUGcBMpsj7cI1MxwJqp9A?e=rvmlqY
+- **Link Google Docs Bagian :https://1drv.ms/w/c/4c356e610a8583e8/IQAcDgvfKxUSRZ38z01dYsNrAVDUGcBMpsj7cI1MxwJqp9A?e=rvmlqY
