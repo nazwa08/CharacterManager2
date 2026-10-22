@@ -7,7 +7,7 @@ Character Manager adalah program berbasis Java yang dibuat untuk mengelola data 
 
 Berikut adalah screenshot hasil program yang menampilkan data karakter, demo level up, mana, dan hasil pemeriksaan `isAlive()`.
 
-![Screenshot Output Character Manager](Screenshot/tp3.png)
+![Screenshot Output Character Manager](tp3.png)
 
 ## Struktur Folder Project
 
