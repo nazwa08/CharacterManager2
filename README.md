@@ -34,7 +34,7 @@ javavisual-tp03-[NIM]/
 - **Link Google Docs Bagian
 - :https://1drv.ms/w/c/4c356e610a8583e8/IQAcDgvfKxUSRZ38z01dYsNrAVDUGcBMpsj7cI1MxwJqp9A?e=rvmlqY
 
-_____________________________________________________________________________________________________________________________
+_________________________________________________________________________________________________
 
 # Character Manager Sprint #2 — TP5
 
@@ -42,7 +42,9 @@ ________________________________________________________________________________
 
 - **Nama:** [Nazwa Haqqi Nasution]
 - **NIM:** [253303621233]
-- **Link Google Docs:** [https://1drv.ms/w/c/4c356e610a8583e8/IQBwBxDYEQ5vT4MfSUDuHigSAbu2bjve80ZZDsvEj7qn9l8?e=3o8X0L]
+- **Link Google Docs:** [https://1drv.ms/w/c/4c356e610a8583e8/IQBwBxDYEQ5vT4MfSUDuHigSAUPIBxQTeYeExxACF3ei2j8?e=Y10Fav]
+
+---
 
 ## 2. Deskripsi Proyek
 
@@ -185,10 +187,155 @@ Konsep tersebut penting agar data karakter tetap terkontrol dan perilaku program
 
 ## 9. Screenshot Hasil Program
 
-![alt text](Tp5.png)
+![alt text](<../../../../Screenshot/Screenshot Tp5.png>)
 
 ## 10. Kesimpulan
 
 Program Character Manager Sprint #2 berhasil menggabungkan pengelolaan objek karakter dengan berbagai fitur pencarian dan analitik. Implementasi `equals()` membantu membandingkan nama karakter, sedangkan `CharacterManager` mengelola penambahan, pencarian, dan penghapusan karakter. Mini-challenge menambahkan kemampuan menghitung rata-rata level dan mencari karakter berdasarkan tipe. Fitur `findStrongest()` melengkapi program dengan pencarian karakter yang memiliki attack tertinggi.
 
 Melalui proyek ini, konsep encapsulation dan reference dapat dipahami melalui implementasi dan pengujian langsung. Program juga menunjukkan pentingnya menjaga akses terhadap data internal agar pengelolaan objek lebih aman dan terstruktur.
+
+
+---------------
+
+# Character Manager — TP8
+## MainWindow, Data Dinamis & Analisis MVC
+
+### Identitas
+- **Nama:** [Purnama Sari]
+- **NIM:** [253303621233]
+- **Kelas:** [Pagi A]
+- **Mata Kuliah:** Praktik Pemrograman Berorientasi Objek (Java)
+
+---
+
+## 1. Deskripsi Proyek
+
+Character Manager adalah aplikasi sederhana berbasis Java yang digunakan untuk mengelola data karakter. Pada TP8, aplikasi dikembangkan menggunakan Java Swing agar data karakter dapat ditampilkan melalui antarmuka grafis (GUI).
+
+Aplikasi menampilkan nama karakter, tipe, level, dan attack. Selain itu, terdapat fitur tambah karakter melalui tombol, validasi nama duplikat, serta perhitungan rata-rata level yang diperbarui setelah karakter berhasil ditambahkan.
+
+## 2. Teknologi yang Digunakan
+
+- Java
+- Java Swing
+- Object-Oriented Programming (OOP)
+- Konsep MVC (Model dan View)
+
+## 3. Struktur Folder
+
+```text
+CharacterManager2/
+├── README.md
+├── Screenshot/
+│   ├── tp8-sebelum.png
+│   └── tp8-setelah.png
+└── src/
+    ├── Main.java
+    └── com/
+        └── unpri/
+            └── charactermanager/
+                ├── model/
+                │   ├── Character.java
+                │   ├── CharacterType.java
+                │   └── CharacterManager.java
+                └── view/
+                    └── MainWindow.java
+```
+
+## 4. Fitur Aplikasi
+
+### A. Daftar Karakter Dinamis
+Aplikasi menampilkan seluruh karakter berdasarkan data yang dikelola oleh `CharacterManager`. Daftar dibuat menggunakan perulangan sehingga tidak perlu membuat `JLabel` secara manual untuk setiap karakter.
+
+### B. Tambah Karakter
+Pengguna dapat menekan tombol **Tambah Karakter**, kemudian mengisi nama, tipe karakter, dan level melalui formulir. Karakter baru ditambahkan ke `CharacterManager` jika datanya valid.
+
+### C. Validasi Data
+Aplikasi memeriksa nama yang kosong, level yang bukan angka, level kurang dari 1, dan nama karakter yang sudah digunakan. Jika data tidak valid atau nama duplikat, aplikasi menampilkan pesan peringatan.
+
+### D. Statistik Rata-rata Level
+Aplikasi menghitung rata-rata level seluruh karakter yang terdaftar. Setelah karakter baru berhasil ditambahkan, daftar dan statistik diperbarui secara langsung.
+
+Rumus yang digunakan:
+
+Rata-rata Level = Total Level Seluruh Karakter / Jumlah Karakter
+
+Jika belum ada karakter, rata-rata ditampilkan sebagai `0.00`.
+
+### E. Pemrograman Event-Driven
+Tombol tambah menggunakan `addActionListener()` untuk menjalankan proses penambahan ketika pengguna mengklik tombol. GUI dijalankan melalui `SwingUtilities.invokeLater()`.
+
+## 5. Data Karakter Awal
+
+Aplikasi dimulai dengan lima karakter berikut:
+
+| Nama | Tipe | Level |
+|---|---|---:|
+| Arthur | WARRIOR | 1 |
+| Merlin | MAGE | 3 |
+| Robin | ARCHER | 2 |
+| Luna | MAGE | 4 |
+| Ragnar | WARRIOR | 5 |
+
+Total level awal adalah 15 dengan jumlah lima karakter. Oleh karena itu, rata-rata level awal adalah **3.00**.
+
+## 6. Screenshot Pengujian
+
+### A. Tampilan Awal
+
+![Screenshot Tampilan Awal](tp8-sebelum.png)
+
+Tampilan awal menunjukkan lima karakter beserta tipe, level, attack, dan rata-rata level sebesar 3.00.
+
+### B. Setelah Menambah Karakter
+
+![Screenshot Setelah Menambah Karakter](tp8-setelah.png)
+
+Pengujian dilakukan dengan menambahkan karakter Thor bertipe WARRIOR pada level 6. Jumlah karakter menjadi enam dan total level menjadi 21, sehingga rata-rata level berubah menjadi **3.50**.
+
+### C. Hasil Pengujian
+
+- Lima karakter awal berhasil ditampilkan.
+- Karakter baru dapat ditambahkan melalui tombol.
+- Nama karakter duplikat ditolak.
+- Input level yang tidak valid ditolak.
+- Daftar dan rata-rata level diperbarui setelah penambahan berhasil.
+
+## 7. Alur Data dan Konsep MVC
+
+Alur data aplikasi dimulai dari `Main.java`, yang membuat objek karakter dan memasukkannya ke `CharacterManager`. `CharacterManager` bertugas mengelola data karakter, termasuk penambahan dan pengambilan daftar karakter. `MainWindow.java` berperan sebagai View yang menampilkan daftar, menerima interaksi tombol, dan memperbarui statistik. Ketika tombol tambah ditekan, View meneruskan data baru ke `CharacterManager`, lalu menampilkan kembali data terbaru.
+
+Pada implementasi ini, Model dan View sudah dipisahkan, tetapi belum terdapat kelas Controller yang berdiri sendiri. Dengan demikian, pengolahan event tombol masih dilakukan di dalam `MainWindow`.
+
+## 8. Cara Menjalankan Program
+
+1. Buka folder `CharacterManager2` di Visual Studio Code.
+2. Pastikan seluruh file Java berada di struktur folder yang benar.
+3. Buka `Main.java`.
+4. Klik **Run**.
+5. Tekan tombol **Tambah Karakter** untuk memasukkan karakter baru.
+6. Isi nama, tipe, dan level, lalu tekan **OK**.
+7. Periksa daftar dan statistik yang diperbarui.
+
+**Catatan:** Data karakter disimpan di memori selama aplikasi berjalan. Karakter yang ditambahkan melalui GUI tidak tersimpan secara permanen setelah aplikasi ditutup.
+
+## 9. Analisis Google Docs — Bagian D
+
+Dokumen analisis TP8:
+
+[https://1drv.ms/w/c/4c356e610a8583e8/IQDeZjMSJgIvTa_9C3BsIIesASVtui51J7DV_7JvOIbjogQ?e=1rNplt]
+
+Nama dokumen yang disarankan: `JavaVisual_TP08_[NIM]_[Nama]`
+
+Dokumen berisi analisis minimal 500 kata mengenai:
+1. Program sekuensial dan event-driven.
+2. Fungsi `SwingUtilities.invokeLater()`.
+3. Kesalahan `JFrame` yang tidak menampilkan jendela.
+4. Hubungan *is-a* dan *has-a*.
+5. Tanggung jawab View dan Controller dalam MVC.
+
+## 10. Kesimpulan
+
+Melalui TP8, aplikasi Character Manager dikembangkan dengan antarmuka Java Swing yang menampilkan data secara dinamis. Pengguna dapat menambahkan karakter melalui tombol, memvalidasi masukan, dan melihat rata-rata level yang berubah sesuai data terbaru. Implementasi ini juga memperkuat pemahaman tentang event-driven programming, pemisahan Model dan View, serta konsep dasar MVC.
+

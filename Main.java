@@ -1,33 +1,40 @@
 
 import com.unpri.charactermanager.model.Character;
+import com.unpri.charactermanager.model.CharacterManager;
 import com.unpri.charactermanager.model.CharacterType;
+import com.unpri.charactermanager.view.MainWindow;
+
+import javax.swing.SwingUtilities;
 
 public class Main {
 
     public static void main(String[] args) {
+        CharacterManager manager = new CharacterManager();
 
-        // Membuat 3 karakter
-        Character c1 = new Character("Arthur", CharacterType.WARRIOR);
-        Character c2 = new Character("Merlin", CharacterType.MAGE, 3);
-        Character c3 = new Character("Robin", CharacterType.ARCHER, 2);
+        // Data karakter awal
+        manager.addCharacter(
+            new Character("Arthur", CharacterType.WARRIOR, 1)
+        );
 
-        System.out.println("=== DATA KARAKTER ===");
-        System.out.println(c1);
-        System.out.println(c2);
-        System.out.println(c3);
+        manager.addCharacter(
+            new Character("Merlin", CharacterType.MAGE, 3)
+        );
 
-        // Demo level up
-        System.out.println("\n=== DEMO LEVEL UP ===");
-        c1.setLevel(c1.getLevel() + 1);
-        System.out.println(c1);
+        manager.addCharacter(
+            new Character("Robin", CharacterType.ARCHER, 2)
+        );
 
-        // 5. Mini-Challenge Bagian B
-        Character c4 = new Character("Luna", CharacterType.MAGE);
-        c4.setMana(50);
+        manager.addCharacter(
+            new Character("Luna", CharacterType.MAGE, 4)
+        );
 
-        System.out.println("\n=== MINI-CHALLENGE BAGIAN B ===");
-        System.out.println(c4);
-        System.out.println("Mana Luna: " + c4.getMana());
-        System.out.println("Apakah Luna masih hidup? " + c4.isAlive());
+        manager.addCharacter(
+            new Character("Ragnar", CharacterType.WARRIOR, 5)
+        );
+
+        // Menjalankan GUI pada Event Dispatch Thread
+        SwingUtilities.invokeLater(() -> {
+            new MainWindow(manager);
+        });
     }
 }
