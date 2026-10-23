@@ -185,7 +185,7 @@ Konsep tersebut penting agar data karakter tetap terkontrol dan perilaku program
 
 ## 9. Screenshot Hasil Program
 
-![alt text](Tp5.png>)
+![alt text](Tp5.png)
 
 ## 10. Kesimpulan
 
