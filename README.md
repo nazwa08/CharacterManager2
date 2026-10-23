@@ -284,7 +284,7 @@ Total level awal adalah 15 dengan jumlah lima karakter. Oleh karena itu, rata-ra
 
 ### A. Tampilan Awal
 
-![Screenshot Tampilan Awal](tp8-sebelum.png)
+![Screenshot Tampilan Awal](tp8_sebelum.png)
 
 Tampilan awal menunjukkan lima karakter beserta tipe, level, attack, dan rata-rata level sebesar 3.00.
 
