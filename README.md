@@ -187,7 +187,7 @@ Konsep tersebut penting agar data karakter tetap terkontrol dan perilaku program
 
 ## 9. Screenshot Hasil Program
 
-![alt text](<../../../../Screenshot/Screenshot Tp5.png>)
+![alt text](Tp5.png)
 
 ## 10. Kesimpulan
 
@@ -202,7 +202,7 @@ Melalui proyek ini, konsep encapsulation dan reference dapat dipahami melalui im
 ## MainWindow, Data Dinamis & Analisis MVC
 
 ### Identitas
-- **Nama:** [Purnama Sari]
+- **Nama:** [Nazwa Haqqi Nasution]
 - **NIM:** [253303621233]
 - **Kelas:** [Pagi A]
 - **Mata Kuliah:** Praktik Pemrograman Berorientasi Objek (Java)
