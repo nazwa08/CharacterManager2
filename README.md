@@ -290,7 +290,7 @@ Tampilan awal menunjukkan lima karakter beserta tipe, level, attack, dan rata-ra
 
 ### B. Setelah Menambah Karakter
 
-![Screenshot Setelah Menambah Karakter](tp8-setelah.png)
+![Screenshot Setelah Menambah Karakter](tp8_sesudah.png)
 
 Pengujian dilakukan dengan menambahkan karakter Thor bertipe WARRIOR pada level 6. Jumlah karakter menjadi enam dan total level menjadi 21, sehingga rata-rata level berubah menjadi **3.50**.
 
