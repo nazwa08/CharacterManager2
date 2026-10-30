@@ -430,13 +430,13 @@ Cursor berubah menjadi bentuk tangan ketika diarahkan ke kartu karakter. Propert
 
 Masukkan screenshot tampilan aplikasi sebelum menggunakan tema TP10.
 
-![Screenshot sebelum TP10](Screenshot/tp8_sebelum.png)
+![Screenshot sebelum TP10](tp10_sesudah.png)
 
 ### Sesudah TP10 — MainWindow v0.4
 
 Masukkan screenshot tampilan aplikasi setelah menggunakan AppTheme dan fitur mini-challenge.
 
-![Screenshot sesudah TP10](Screenshot/tp10_sesudah.png)
+![Screenshot sesudah TP10](tp10_sesudah.png)
 
 ## 8. Konsep MVC
 
