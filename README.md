@@ -430,7 +430,7 @@ Cursor berubah menjadi bentuk tangan ketika diarahkan ke kartu karakter. Propert
 
 Masukkan screenshot tampilan aplikasi sebelum menggunakan tema TP10.
 
-![Screenshot sebelum TP10](tp10_sesudah.png)
+![Screenshot sebelum TP10](tp8_sebelum.png)
 
 ### Sesudah TP10 — MainWindow v0.4
 
