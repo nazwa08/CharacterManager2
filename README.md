@@ -187,7 +187,7 @@ Konsep tersebut penting agar data karakter tetap terkontrol dan perilaku program
 
 ## 9. Screenshot Hasil Program
 
-![alt text](Tp5.png)
+![alt text](<../../../../Screenshot/Screenshot Tp5.png>)
 
 ## 10. Kesimpulan
 
@@ -196,13 +196,13 @@ Program Character Manager Sprint #2 berhasil menggabungkan pengelolaan objek kar
 Melalui proyek ini, konsep encapsulation dan reference dapat dipahami melalui implementasi dan pengujian langsung. Program juga menunjukkan pentingnya menjaga akses terhadap data internal agar pengelolaan objek lebih aman dan terstruktur.
 
 
----------------
+----------------------------------------------------------------------------------
 
 # Character Manager — TP8
 ## MainWindow, Data Dinamis & Analisis MVC
 
 ### Identitas
-- **Nama:** [Nazwa Haqqi Nasution]
+- **Nama:** [Nazwa Haqqi Nst]
 - **NIM:** [253303621233]
 - **Kelas:** [Pagi A]
 - **Mata Kuliah:** Praktik Pemrograman Berorientasi Objek (Java)
@@ -284,13 +284,13 @@ Total level awal adalah 15 dengan jumlah lima karakter. Oleh karena itu, rata-ra
 
 ### A. Tampilan Awal
 
-![Screenshot Tampilan Awal](tp8_sebelum.png)
+![Screenshot Tampilan Awal](tp8-sebelum.png)
 
 Tampilan awal menunjukkan lima karakter beserta tipe, level, attack, dan rata-rata level sebesar 3.00.
 
 ### B. Setelah Menambah Karakter
 
-![Screenshot Setelah Menambah Karakter](tp8_sesudah.png)
+![Screenshot Setelah Menambah Karakter](tp8-setelah.png)
 
 Pengujian dilakukan dengan menambahkan karakter Thor bertipe WARRIOR pada level 6. Jumlah karakter menjadi enam dan total level menjadi 21, sehingga rata-rata level berubah menjadi **3.50**.
 
@@ -339,3 +339,123 @@ Dokumen berisi analisis minimal 500 kata mengenai:
 
 Melalui TP8, aplikasi Character Manager dikembangkan dengan antarmuka Java Swing yang menampilkan data secara dinamis. Pengguna dapat menambahkan karakter melalui tombol, memvalidasi masukan, dan melihat rata-rata level yang berubah sesuai data terbaru. Implementasi ini juga memperkuat pemahaman tentang event-driven programming, pemisahan Model dan View, serta konsep dasar MVC.
 
+--------------------------------------------------------------------------------------------------------- 
+
+# Character Manager — TP10 (Java Visual SIH-6406)
+
+## Identitas
+- **Nama:** [Nazwa Haqqi Nasution]
+- **NIM:** [253303621233]
+- **Mata Kuliah:** Java Visual
+- **Tugas:** TP10 — Character Manager Sprint #4
+
+---
+
+## 1. Deskripsi Program
+
+Character Manager adalah aplikasi desktop berbasis Java Swing yang digunakan untuk mengelola data karakter. Aplikasi ini dikembangkan dengan konsep Model-View-Controller (MVC) sederhana.
+
+Pada TP10, aplikasi dikembangkan dengan menambahkan sistem tema menggunakan `AppTheme.java`, pengaturan properti komponen Swing, serta fitur penanda karakter berdasarkan level.
+
+## 2. Struktur Project
+
+```text
+CharacterManager2/
+└── src/
+    └── com/unpri/charactermanager/
+        ├── model/
+        │   ├── Character.java
+        │   ├── CharacterManager.java
+        │   └── CharacterType.java
+        ├── view/
+        │   ├── MainWindow.java
+        │   └── AppTheme.java
+        └── Main.java
+```
+
+## 3. Fitur Aplikasi
+
+1. Menampilkan daftar karakter secara dinamis.
+2. Menambahkan karakter melalui tombol **Tambah Karakter**.
+3. Memvalidasi nama karakter agar tidak kosong.
+4. Memvalidasi level agar minimal bernilai 1.
+5. Mencegah penambahan karakter dengan nama yang sama.
+6. Menghitung rata-rata level seluruh karakter.
+7. Memberikan warna kartu berdasarkan role karakter.
+8. Memberikan tampilan khusus untuk karakter dengan level tinggi.
+
+## 4. Implementasi AppTheme
+
+`AppTheme.java` dibuat di dalam package `view` untuk mengatur seluruh tema tampilan aplikasi.
+
+Isi pengaturan tema meliputi:
+
+- Warna latar belakang utama.
+- Warna teks utama dan teks terang.
+- Warna emas untuk karakter level tinggi.
+- Warna khusus untuk setiap role.
+- Font judul, font isi, dan font monospace.
+- Border untuk kartu karakter.
+- Konstanta batas level tinggi.
+
+Warna disimpan di `AppTheme` dan bukan di `Character` karena warna merupakan bagian dari tampilan aplikasi. Dengan demikian, class `Character` tetap berfokus pada data dan perilaku karakter. Pemisahan ini juga membuat kode lebih mudah dirawat dan menghindari ketergantungan Model terhadap tampilan Swing.
+
+## 5. Mini-Challenge: Highlight Level Tinggi
+
+Karakter yang memiliki level minimal 5 akan ditampilkan menggunakan tulisan berwarna emas dan tebal.
+
+Batas level disimpan dalam konstanta:
+
+```java
+public static final int HIGH_LEVEL_THRESHOLD = 5;
+```
+
+Penerapannya dilakukan dengan memeriksa level karakter. Jika level mencapai atau melebihi 5, warna teks berubah menjadi emas dan font menjadi bold.
+
+## 6. Dua Properti Tambahan
+
+Dua properti tambahan yang diterapkan pada kartu karakter adalah:
+
+**1. Tooltip**
+
+Tooltip menampilkan informasi role, HP, dan Attack ketika kursor diarahkan ke kartu karakter. Properti ini membantu pengguna melihat informasi tambahan tanpa membuat tampilan utama terlalu penuh.
+
+**2. Cursor HAND_CURSOR**
+
+Cursor berubah menjadi bentuk tangan ketika diarahkan ke kartu karakter. Properti ini memberikan petunjuk visual ketika pengguna mengarahkan kursor ke kartu.
+
+## 7. Screenshot Aplikasi
+
+### Sebelum TP10 — MainWindow v0.3
+
+Masukkan screenshot tampilan aplikasi sebelum menggunakan tema TP10.
+
+![Screenshot sebelum TP10](Screenshot/tp8_sebelum.png)
+
+### Sesudah TP10 — MainWindow v0.4
+
+Masukkan screenshot tampilan aplikasi setelah menggunakan AppTheme dan fitur mini-challenge.
+
+![Screenshot sesudah TP10](Screenshot/tp10_sesudah.png)
+
+## 8. Konsep MVC
+
+Aplikasi ini menggunakan pemisahan tanggung jawab berdasarkan konsep MVC:
+
+- **Model:** Mengelola data karakter, tipe karakter, dan proses pengelolaan karakter.
+- **View:** Menampilkan data karakter menggunakan Java Swing serta mengatur warna, font, border, dan properti komponen melalui `AppTheme`.
+- **Main:** Menyiapkan data karakter dan menjalankan aplikasi melalui `SwingUtilities.invokeLater()`.
+
+Pemisahan ini membuat program lebih terstruktur dan memudahkan pengembangan fitur tanpa mencampurkan pengelolaan data dengan tampilan.
+
+## 9. Google Docs — Bagian D
+
+Link Google Docs analisis properti dan MVC:
+
+[https://1drv.ms/w/c/4c356e610a8583e8/IQCFF4o_6b09SKvJF71n0-IvAfLcrl1-3MK_NB1X2sxxkgc?e=OPq3DE]
+
+Dokumen tersebut berisi analisis mengenai JavaBeans getter/setter, properti JLabel, perbedaan setSize, setPreferredSize dan pack(), pemisahan Model dan View, serta penggunaan logical font dan deriveFont().
+
+## 10. Kesimpulan
+
+Pada TP10, aplikasi Character Manager dikembangkan dengan sistem tema yang lebih terstruktur menggunakan `AppTheme.java`. Aplikasi juga memiliki fitur highlight untuk karakter level tinggi, tooltip informasi karakter, dan perubahan cursor. Melalui tugas ini, saya memahami pentingnya pengaturan properti komponen Swing serta pemisahan tanggung jawab antara Model dan View dalam konsep MVC.
